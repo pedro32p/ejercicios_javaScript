@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 11</title>
+</head>
+<body>
+    <script>
+        var numero1 = parseInt(prompt("Introduce el primer número:"));
+        var numero2 = parseInt(prompt("Introduce el segundo número:"));
+        var numero3 = parseInt(prompt("Introduce el tercer número:"));
+
+       var mayor;
+       var menor;
+
+        if (numero1 > numero2 && numero1 > numero3) {
+            mayor = numero1;
+            if(numero2 > numero3) {
+                menor = numero3;
+            }
+            else{
+                menor = numero2;
+            }
+        }
+        else {
+            if(numero2 > numero3) {
+                mayor = numero2;
+                if(numero3 > numero1) {
+                    menor = numero1;
+                }
+                else{
+                    menor = numero3;
+                }
+            }
+            else{
+                mayor = numero3;
+                if (numero2 < numero1){
+                    menor = numero2;
+                }
+                else{
+                    menor = numero1;
+                }
+            }
+        }
+        
+        document.write("El mayor es " + mayor + ", el menor es " + menor);
+
+        // var valores = [numero1, numero2, numero3];
+        // var minimo = Math.min.apply(null, valores);
+        // var maximo = Math.max.apply(null, valores);
+
+        // document.write(minimo + " , " + maximo);
+
+    </script>
+</body>
+</html>

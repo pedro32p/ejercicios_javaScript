@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        var primerNumero = parseInt(prompt("Introduce el primer número",5));
+        var segundoNumero = parseInt(prompt("Introduce el segundo número",5));
+
+        var suma = primerNumero + segundoNumero;
+        var resta = primerNumero - segundoNumero;
+        var multiplicacion = primerNumero * segundoNumero;
+        var division = (primerNumero / segundoNumero).toFixed(2);
+        var potencia = Math.pow(primerNumero,segundoNumero);
+        var modulo = primerNumero % segundoNumero;
+
+        document.write(primerNumero + " + " + segundoNumero + " = " + suma);
+        document.write ("<br />");
+        document.write(primerNumero + " - " + segundoNumero + " = " + resta);
+        document.write ("<br />");
+        document.write(primerNumero + " * " + segundoNumero + " = " + multiplicacion);
+        document.write ("<br />");
+        document.write(primerNumero + " / " + segundoNumero + " = " + division);
+        document.write ("<br />");
+        document.write(primerNumero + " ** " + segundoNumero + " = " + potencia);
+        document.write ("<br />");
+        document.write(primerNumero + " % " + segundoNumero + " = " + modulo);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 9</title>
+</head>
+<body>
+    <script>
+        var cantidadIntroducida = parseInt(prompt("Introduce la cantidad:"));
+        var opcion= prompt("Introduce '1' si quieres convertir de Euros a USD y '2' si deseas hacer lo contrario:");
+
+        if(opcion === "1") {
+            var cantidadTransformada = (cantidadIntroducida * 1.04).toFixed(2);
+            document.write("$ " + cantidadTransformada + " USD");
+        }
+        else{
+             var cantidadTransformada = (cantidadIntroducida / 1.04).toFixed(2);
+            document.write(cantidadTransformada + " Euros");
+        }
+       
+    </script>
+</body>
+</html>
