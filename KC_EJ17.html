@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 17</title>
+</head>
+<body>
+    <script>
+        var diccionario = {
+            "pedro": "peter45@gmail.com",
+            "pablo": "pablo67@gmail.com",
+            "ignacio": "ignacio3@gmail.com",
+            "antonio": "antonio03@gmail.com",
+            "mario": "mario_35@gmail.com",
+        }
+        var nombre = prompt("Introduce el nombre:").toLowerCase();
+
+        if(diccionario[nombre]) {
+            document.write(diccionario[nombre]);
+        }
+        else{
+            document.write("Ese nombre no existe.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 15</title>
+</head>
+<body>
+    <script>
+
+        var arreglo1 = [];
+        var arreglo2 = [];
+        var arreglo3 = [];
+        
+        for(i=1; i<=3; i++) {
+            var nombrePersona = prompt("Introduce el nombre de la persona " + i);
+            var notaPersona = prompt("Introduce la nota de la persona " + i);
+
+            if(i==1) {
+                arreglo1 = [nombrePersona, notaPersona];
+            }
+            else
+            {
+                if(i==2){
+                    arreglo2 = [nombrePersona, notaPersona];
+                }
+                else{
+                    arreglo3 = [nombrePersona, notaPersona];
+                }
+            }
+         }
+        //  console.log(arreglo1)
+        //  console.log(arreglo2)
+        //  console.log(arreglo3)
+
+    </script>
+</body>
+</html>

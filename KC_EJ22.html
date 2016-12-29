@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 22</title>
+</head>
+<body>
+    <script>
+        
+        var listaNombres = [];
+        var listaEdades = [];
+        var listaMayores = [];
+        var mensaje = "Tienen derecho al voto ";
+        var contador = 0;
+        for(i=0; i<3; i++) {
+            listaNombres[i] = prompt("Introduce el nombre de la persona número " + (i+1) + ":");
+            listaEdades[i] = parseInt(prompt("Introduce la edad de la persona número " + (i+1) + ":"));
+        }
+        for(j=0; j<listaEdades.length; j++) {
+            if(listaEdades[j] >= 18) {
+                    listaMayores[contador] = listaNombres[j];
+                    contador ++ 
+            }
+        }  
+
+        if(listaMayores.length > 0) {
+
+            if(listaMayores.length === 1){
+                document.write(listaMayores[0] + " es el único que tiene derecho al voto.")
+            }
+            else{
+                for (i = 0; i<listaMayores.length; i++) {
+                    
+                    if (i !== listaMayores.length -2) {
+                        if(i === listaMayores.length - 1){
+                            mensaje = mensaje + listaMayores[i] + "."
+                        }else{
+                            mensaje = mensaje + listaMayores[i] + ", "
+                        }
+                    }
+                    else{
+                        mensaje = mensaje + listaMayores[i] + " y "
+                    }
+                }
+                document.write(mensaje)
+            }
+            
+        }
+        else{
+            document.write("Ninguno tiene derecho al voto.")
+        }
+    </script>
+</body>
+</html>

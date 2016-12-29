@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Ejercicio 23</title>
+</head>
+ <body>
+
+    <script>
+        var listaNombres = []
+        var listaPrimeraNota = []
+        var listaSegundaNota = []
+        var listaTerceraNota = []
+        var contador = 0
+        var mensaje = ""
+
+        while(mensaje != "terminar") {
+            
+                mensaje = prompt("Introduce el nombre de la persona nº " + (contador+1) + ":")
+                
+                if(mensaje != "terminar") {
+                    listaNombres [contador] = mensaje
+                    listaPrimeraNota[contador] = parseFloat(prompt("Introduce la primera nota de " + listaNombres[contador] + ":"))
+                    listaSegundaNota[contador] = parseFloat(prompt("Introduce la segunda nota de " + listaNombres[contador] + ":"))
+                    listaTerceraNota[contador] = parseFloat(prompt("Introduce la tercera nota de " + listaNombres[contador] + ":"))
+                    contador += 1
+                }
+                
+        }
+
+        for (k=0; k<listaNombres.length; k++) {
+            var media = (listaPrimeraNota[k] + listaSegundaNota[k] + listaTerceraNota[k]) / 3
+            media = media.toFixed(2)
+            document.write("Nombre: " + listaNombres[k] + "      Nota media: " + media)
+            document.write ("<br />");
+        }
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 13</title>
+</head>
+<body>
+    
+    <script>
+        var listaDeNumeros = [];
+        for (i=1; i<=20; i++) {
+            listaDeNumeros[i] = i;   
+        }
+        
+        var numero1 = parseInt(prompt("Introduce el inicio del rango (1-20):"));
+        var numero2 = parseInt(prompt("Introduce el fin del rango (1-20):"));
+
+        if((numero1>0 && numero1<21) && (numero2>0 && numero2<21)){
+            if(numero1<numero2) {
+                var rango = listaDeNumeros.slice(numero1 + 1, numero2 + 1);
+                document.write(rango);
+            }
+            else{
+                document.write("El primer número debe ser menor que el segundo.");
+            }
+        }
+        else{
+            document.write("El rango debe ser de 1 a 20.");
+        } 
+    </script>
+
+</body>
+</html>

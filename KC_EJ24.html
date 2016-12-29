@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Ejercicio 24</title>
+</head>
+ <body>
+
+    <script>
+        var listaNombres = []
+        var listaPrimeraNota = []
+        var listaSegundaNota = []
+        var listaTerceraNota = []
+        var listadoObjetos = []
+        var objeto = {"nombre": null, "media": null}
+        var contador = 0
+        var mensaje = ""
+
+        while(mensaje != "terminar") {
+            
+                mensaje = prompt("Introduce el nombre de la persona nº " + (contador+1) + " (terminar para salir):")
+                
+                if(mensaje != "terminar") {
+                    listaNombres [contador] = mensaje
+                    listaPrimeraNota[contador] = parseFloat(prompt("Introduce la primera nota de " + listaNombres[contador] + ":"))
+                    listaSegundaNota[contador] = parseFloat(prompt("Introduce la segunda nota de " + listaNombres[contador] + ":"))
+                    listaTerceraNota[contador] = parseFloat(prompt("Introduce la tercera nota de " + listaNombres[contador] + ":"))
+                    contador += 1
+                }
+                
+        }
+
+        for (k=0; k<listaNombres.length; k++) {
+
+            var media = (listaPrimeraNota[k] + listaSegundaNota[k] + listaTerceraNota[k]) / 3
+            media = media.toFixed(2)
+            objeto.nombre = listaNombres[k]
+            objeto.media = media
+           
+            listadoObjetos[k] = {"nombre": listaNombres[k], media: media}
+        }
+        
+        var listadoObjetosOrdenado = listadoObjetos.sort(function (a, b){
+            return (b.media > a.media)
+        })
+        
+        for(k=0;k<listadoObjetosOrdenado.length;k++){
+            document.write(listadoObjetosOrdenado[k].nombre + "    " + listadoObjetosOrdenado[k].media )
+            document.write ("<br />");
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 20</title>
+</head>
+<body>
+    <script>
+        var limite = parseInt(prompt("Introduce el límite:"));
+        var acumulado = 0;
+        var array = [];
+        for(i=1; i<=limite; i++) {
+            array[i-1] = i;
+            acumulado = acumulado + i;
+        }
+        for (j=0; j<array.length; j++) {
+            if(array[j] === limite) {
+                document.write(array[j] + " = " + acumulado);
+            }
+            else{
+                document.write(array[j] + " + ");
+            }
+        }
+    </script>
+</body>
+</html>

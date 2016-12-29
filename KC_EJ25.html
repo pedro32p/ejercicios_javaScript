@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 25</title>
+</head>
+<body>
+    <script>
+       var numeroAleatorio = Math.floor((Math.random() * 100) + 1);
+       //console.log(numeroAleatorio);
+       var oportunidades = 5;
+       var numero = 0;
+
+            numero = parseInt(prompt("¿Qué número es? (te quedan " +  oportunidades + " oportunidades)"));
+            oportunidades --;
+            do {
+                if(numero === numeroAleatorio) {
+                    document.write("Enhorabuena, lo has adivinado!!")
+                }
+                else{
+                    if(numero > numeroAleatorio){
+                        
+                        numero = parseInt(prompt("Intenta con un número menor (te quedan " +  oportunidades + " oportunidades)"));
+                        oportunidades -- ;
+                    }
+                    else{
+                        numero = parseInt(prompt("Intenta con un número mayor (te quedan " +  oportunidades + " oportunidades)"));
+                        oportunidades --;
+                    }
+                }
+            }
+            while(oportunidades > 0 && numero !== numeroAleatorio)
+
+            if(oportunidades === 0) {
+                document.write("GAME OVER");
+            }
+            else{
+                document.write("Enhorabuena, has ganado!!");
+            }
+
+    </script>
+</body>
+</html>
