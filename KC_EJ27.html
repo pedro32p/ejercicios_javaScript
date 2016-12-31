@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 27</title>
+</head>
+<body>
+    <script>
+        var textoIntroducido = prompt("Introduce un texto: ").toLowerCase();
+        
+        function esPalindromo(textoIntroducido){
+
+            var resultado = ""
+                //transformo la cadena en un array
+            var arrayTexto = textoIntroducido.split("");
+            //cadena con el contenido del array sin espacios
+            var cadenaSinEspacios = "";
+            for(i in arrayTexto) {
+                if(arrayTexto[i] != " ") {
+                cadenaSinEspacios += arrayTexto[i];
+                }
+            }
+            
+            //convierto la cadena sin espacios en un array y obtengo el inverso
+            var arrayTextoSinEspacios = cadenaSinEspacios.split("");
+            var arrayTextoSinEspaciosInverso = cadenaSinEspacios.split("").reverse();
+
+            //compruebo si son iguales
+            var sonPalindromos = true;
+            for(i in arrayTextoSinEspacios) {
+                if(arrayTextoSinEspacios[i] == arrayTextoSinEspaciosInverso[i]) {
+                    // Todo va bien y la variable sonPalindromos sigue siendo true
+                }
+                else {
+                    // Alguna letra es distinta, por lo que ya no es un palíndromo
+                    sonPalindromos = false;
+                }
+            }
+            
+            if(sonPalindromos) {
+                resultado += "es un palíndromo.";
+            }
+            else {
+                resultado += "no es un palíndromo.";
+            }
+            return resultado;
+         }
+         
+          var resultado = esPalindromo(textoIntroducido)
+          document.write("El texto introducido " + resultado);
+
+    </script>
+</body>
+</html>

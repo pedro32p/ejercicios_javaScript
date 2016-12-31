@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 26</title>
+</head>
+<body>
+    <script>
+        var numFilas = parseInt(prompt("Introduce el nº de filas: "));
+        pintaFilas(numFilas)
+        
+        function pintaFilas(numFilas) {
+                document.write("<table>");
+                for(i=0; i<numFilas; i++) {
+                    document.write("<tr><td></td></tr>");
+                }
+                document.write("</table>");
+        }
+    </script>
+</body>
+</html>

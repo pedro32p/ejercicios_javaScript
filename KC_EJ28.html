@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Ejercicio 28</title>
+</head>
+<body>
+    <script>
+        var lado = parseInt(prompt("Inrtroduce el lado: "));
+        var figura = prompt("Introduce la figura");
+
+        var arrayFigura = []
+        var copiaArray = []
+        var contador = 0
+
+        function pintarRectangulo(lado, figura) {
+
+            for(i=0; i<lado; i++){ 
+
+                if(contador === 0 || contador === lado -1) {
+                    for(i=0; i<lado; i++){ 
+                        arrayFigura[i] = figura;
+                        console.log("entra aqui")
+                    }
+                }
+                else {
+                    for(k=0; k<lado; k++){ 
+                        if(k===0 || k=== lado-1){
+                             arrayFigura[k] = figura;
+                        }
+                        else{
+                            arrayFigura[k] = "  ";
+                        }
+                    }
+                }           
+                document.write(arrayFigura);
+                document.write ("<br />");
+                  contador ++; 
+            }       
+        }
+        pintarRectangulo(lado, figura)
+        pintarRectangulo(lado, figura)
+    </script>
+</body>
+</html>

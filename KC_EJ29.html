@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8" />
-<title>Ejercicio 24</title>
+<title>Ejercicio 29</title>
 </head>
  <body>
 
@@ -31,8 +31,10 @@
         }
 
         for (k=0; k<listaNombres.length; k++) {
-            var media = (listaPrimeraNota[k] + listaSegundaNota[k] + listaTerceraNota[k]) / 3
-            media = media.toFixed(2)
+
+            //llamo a la función que calcula las medias
+            var media = calculaMedias(listaPrimeraNota[k], listaSegundaNota[k],listaTerceraNota[k]);
+
             objeto.nombre = listaNombres[k]
             objeto.media = media
            
@@ -46,6 +48,11 @@
         for(k=0;k<listadoObjetosOrdenado.length;k++){
             document.write(listadoObjetosOrdenado[k].nombre + "    " + listadoObjetosOrdenado[k].media )
             document.write ("<br />");
+        }
+
+        function calculaMedias(nota1, nota2,nota3){
+            var media = (nota1 + nota2 + nota3) / 3;
+            return media.toFixed(2);
         }
 
     </script>
